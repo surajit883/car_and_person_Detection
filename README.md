@@ -31,7 +31,7 @@ The dataset consisted of images and their corresponding annotations in JSON form
 During the inference phase, the model processes unseen images to predict the presence and location of persons and cars. The model's output includes bounding boxes and class labels for the detected objects.
 
 ## False Positives
-Some false pos
+Some false positives may occur when the model incorrectly identifies a background object as a person or a car. This can happen due to similarities in color, texture, or shape between the detected objects and the actual targets.
 
 ## Data Preparation
 The provided dataset consisted of images and their corresponding annotation files in JSON format. The following steps were taken to prepare the data:
