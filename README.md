@@ -10,6 +10,29 @@ I chose YOLOv8 for the following reasons:
 - **Flexibility and ease of use**: YOLOv8 supports custom training, pre-trained weights, and easy integration into existing projects.
 - **Efficiency**: YOLOv8 offers high performance, allowing us to detect multiple objects in an image with great accuracy, even in real-time applications.
 
+## Model Name
+**YOLOv8** (You Only Look Once Version 8)
+
+## Links to Dataset and Framework
+- **Dataset**: https://evp-ml-data.s3.us-east-2.amazonaws.com/ml-interview/openimages-personcar/trainval.tar.gz
+
+## Explain About the Model
+YOLOv8 is a state-of-the-art object detection model designed for real-time applications. It balances speed and accuracy, making it ideal for detecting multiple objects in images or video streams. The model processes images in a single pass, predicting bounding boxes and class probabilities directly, allowing for fast inference times.
+
+## Primary Analysis
+The dataset consisted of images and their corresponding annotations in JSON format. After converting the JSON annotations to the YOLO format, the data was split into training, validation, and test sets. The model was trained using the training dataset, and predictions were made on the test dataset.
+
+## Assumptions
+- The dataset is representative of the real-world scenarios where the model will be deployed.
+- The annotations in the JSON files are accurate and complete.
+- The YOLOv8 model is suitable for detecting persons and cars within the provided images.
+
+## Inference
+During the inference phase, the model processes unseen images to predict the presence and location of persons and cars. The model's output includes bounding boxes and class labels for the detected objects.
+
+## False Positives
+Some false pos
+
 ## Data Preparation
 The provided dataset consisted of images and their corresponding annotation files in JSON format. The following steps were taken to prepare the data:
 1. **Converted JSON to YOLO format labels**: The JSON annotation files were converted to the YOLO label format (text files) to be compatible with YOLOv8.
