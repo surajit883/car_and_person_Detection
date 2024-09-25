@@ -60,18 +60,33 @@ create a virtual env and then install required packages
 pip install -r requirements.txt
 ```
 
+### 2. **jason to yolo fromat**
+Before train the modle we need to convert our data to yolo format 
+```bash
+python src/convert_jason_to_yolo.py
+```
+### 2. **split the datset and preapare data for model**
+Before train the modle we need to split our dataset .to split dataset  
+```bash
+python src/split_data.py
+```
 ### 2. **Train the YOLOv8 Model**
 The model was trained on the training dataset using the `train.py` script. This script handles loading the training data, configuring the model, and training the YOLOv8 architecture. To run the training:
 ```bash
-python scripts/train.py
+python src/train.py
 ```
 The model weights are saved to the `models/` directory as `best.pt`.
 
 ### 3. **Predict on Test Images**
 After the model is trained, predictions can be made on the test dataset using the `predict.py` script:
 ```bash
-python scripts/predict.py
+python src/predict.py
 ```
+### 3. **For check model accurcy on predict data**
+After the model is predicted the images check tha accuracy of images `check_iou_accuracy_v2.py` script:
+```bash
+python src/check_iou_accuracy_v2.py
+
 This script loads the trained model and runs it on the test images, saving the detection results to the appropriate folder.
 
 ### 4. **Evaluate the Model**
