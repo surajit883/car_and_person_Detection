@@ -1,0 +1,7 @@
+train: /home/surajit/d/assigment_v2/train/images/ ##train image path 
+val: /home/surajit/d/assigment_v2/val/images/  ## Validation images path 
+test: /home/surajit/d/assigment_v2/test/images/  ## test images path for testing the prediction images 
+
+nc: 2  ## Number of classes
+names: ['person', 'car']  ## Class names
+
